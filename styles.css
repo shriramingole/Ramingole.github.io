@@ -26,6 +26,21 @@ body{margin:0;background:var(--bg);color:#0f172a;line-height:1.6}
 nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
 nav a:hover{color:var(--accent)}
 
+ nav a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: linear-gradient(90deg, var(--neon-blue),var(--neon-pink));
+transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
 .hero{padding:3rem 0;background:linear-gradient(180deg,#0b63ff 0%,#0c1625 60%);color:#fff;border-bottom-left-radius:20px;border-bottom-right-radius:20px}
 .hero-inner{display:grid;grid-template-columns:1fr 340px;gap:1.25rem;align-items:center;max-width:var(--max);margin:0 auto;padding:2rem}
 .hero-text h1{font-size:2rem;margin:.2rem 0}
@@ -43,13 +58,14 @@ animation: glow-border 1.5s infinite alternate;
 
 }
 .icon {
-    margin-left: 20%;
+    margin-left: 0%;
+    margin-top: 15%;
     border-radius: 50%;
     size-adjust: cover;
     box-sizing: initial;
     overflow: hidden;
-    height: 300px;
-    width: 300px;
+    height: 306px;
+    width: 306px;
  animation: glow-border 1.5s infinite alternate;
 
     border: 3px solid #1e272e;
@@ -81,14 +97,14 @@ animation: glow-border 1.5s infinite alternate;
   .hero-card{order:2;margin-top:1rem}
 }
 .typing-effect{
-width: 20ch;
+width: 25ch;
 color: #d4dedd;
 font-size: 2rem;
 font-weight: 700;
 overflow: hidden;
 white-space: nowrap;
 border-right: 2px solid;
-font-family: monospace;
+font-family: Arial, Helvetica, sans-serif ;
 animation: typing 1s  steps(20), blink 0.5s
 step-end infinite;
 
@@ -209,4 +225,14 @@ step-end infinite;
   margin-top: 20px;
   font-size: 14px;
   color: #aaa;
+}
+.footer-social p{
+  margin-left: 100px;
+  display: flex;
+}
+.footer-social p i{
+  display: flex;
+  margin-top: 5px;
+  color:#f39c12 ;
+
 }
